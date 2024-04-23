@@ -9,7 +9,8 @@ class App extends Component {
     super (props)
 
     this.state ={
-      email: " "
+      email: " ",
+      password: " "
 
     }
 
@@ -19,7 +20,7 @@ class App extends Component {
   login(e){
     // validacoes
     // valirdar email, senha
-
+ 
   }
 
   render(){
@@ -27,14 +28,19 @@ class App extends Component {
       <div>
         <h3>Tela de Login</h3>
         <form onSubmit={this.login}>
-          <input type= "email" value={this.state.email}
+          <input 
+            type= "email" 
+            value={this.state.email}
             onChange={(e)=> this.setState({email:e.target.value})}/>
-          <button type= "submit">Enviar</button>
+          <input 
+            type= "senha" 
+            value={this.state.senha}
+            onChange={(e)=> this.setState({senha:e.target.value})}/>
+            
+          <button type= "submit">Acessar</button>
         </form>
-
-
-
       </div>
+
     )
 
   }
